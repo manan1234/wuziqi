@@ -1,0 +1,285 @@
+@import url(base.css);
+body{
+	background:url(1.jpg) 0 0 no-repeat;
+	background-size: cover;
+	/*overflow: hidden;*/
+}
+#dbg{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background: rgba(163,163,161,1) url(9.jpg) no-repeat 0 0;
+	background-size: cover;
+	z-index: 15;
+	display: block;
+}
+#jinru{
+	width: 40%;
+	height:40px;
+	margin: auto;
+	margin-top: 550px;
+}
+#shezhi{
+	width: 20%;
+	height:30px;
+	position: absolute;
+	top:560px;
+	right: 0;
+}
+
+#canvas{
+	border:8px solid #000;
+	border-image-source: url(bo-img.png);
+	box-shadow: 5px 5px 5px #c6cacd;
+	border-image-slice :8;
+	border-image-width :6px;
+	border-image-repeat :round;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin:  auto;
+}
+#white-biao{
+	/*border:1px solid #000;*/
+	position: absolute;
+	right: 100px;
+	top: 65%;
+	z-index: 3;
+	/*background: url(1.png);*/
+
+}
+#black-biao{
+	/*border:1px solid #000;*/
+	position: absolute;
+	right: 100px;
+	top: 15%;
+	/*background: url(1.png);*/
+	
+}
+#img1{
+	position: absolute;
+	left: 100px;
+	top:100px;
+	z-index: 2;
+}
+/*点击按钮*/
+#dianji{
+	width: 200px;
+	height: auto;
+	position: absolute;
+	left: 50px;
+	top: 20%;	
+}
+.dj{
+	width: 200px;
+	height:81px;
+	background: url(kaishi.png) no-repeat 0 0;
+	background-size:200px 81px;
+	font-family: "王羲之书法字体常规" ;
+	font-size:20px;
+	line-height: 81px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+/*选关*/
+#xuanguan{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 20;
+	display: none;
+}
+#change{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	transform:translateX(-1500px);
+	opacity: 0;
+	width: 200px;
+	height: 162px;
+	border: 1px solid rgba(11,11,11,0.3)
+}
+@keyframes toright{
+	0%{
+		transform:translateX(-1500px);
+		opacity: 0;
+	}
+	100%{
+		transform:translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes toleft{
+	0%{
+		transform:translateX(0);
+		opacity: 1;
+	}
+	100%{
+		transform:translateX(-1500px);
+		opacity: 0;
+	}
+}
+.active{
+	animation:toright 0.2s linear both;
+}
+.active1{
+	animation:toleft 0.2s linear both;
+}
+#hf{
+	position: absolute;
+	right: 200px;
+	top: 10%;
+}
+#wf{
+	position: absolute;
+	right: 200px;
+	top: 60%;
+}
+span{
+	height: 40px;
+	font-size: 26px;
+	padding: 5px 10px;
+	color: #000;
+	line-height: 30px;
+
+}
+#hf span:nth-of-type(2),#wf span:nth-of-type(2){
+	background:url(hf.png) no-repeat center center; 
+	background-size:cover; 
+}
+
+/*总时间*/
+#time{
+	width: 200px;
+	height: 40px;
+	font-size: 30px;
+	padding: 5px 10px;
+	color: #000;
+	line-height: 30px;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	left: 30px;
+	top: 8%;
+	display: none;
+}
+#htime{
+	width: 50px;
+	height: 30px;
+	position: absolute;
+	right:7%;
+	top: 10%;
+	border: 1px solid #e0dbd5;
+	text-align: center;
+	line-height: 30px;
+}
+#wtime{
+	width: 50px;
+	height: 30px;
+	position: absolute;
+	right:7%;
+	top: 60%;
+	border: 1px solid #e0dbd5;
+	text-align: center;
+	line-height: 30px;
+
+}
+/*设置页面*/
+#sz-main{
+	position: absolute;
+	left: 0;top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+	display: none;
+	background: rgba(0,0,0,0.5);
+}
+ #main{
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border: 2px solid rgba(204,204,204,0.8);
+	box-shadow: 2px 2px 5px #000;
+	background: url(shezhi-bg.jpg) no-repeat center center;
+	background-size:cover;
+	z-index: 40; 
+	display: none;
+}
+ .op{
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background:rgba(218,218,218,0.7);
+	z-index: 41;
+	display: none;
+}
+/*输赢都弹出*/
+#always{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 11;
+	/*display: none;*/
+}
+/*赢的时候弹出*/
+/*输的时候弹出*/
+#win,#win1,#lose,#yin,#shu{
+	width: 523px;
+	height: 111px;
+	background-size: cover;
+	position: absolute;
+	
+	margin: auto;
+	z-index: 13;
+}
+#win{
+	background: url(win.png) no-repeat 0 center;
+	left: 0;
+	top:100px;
+	right: 0;
+}
+#win1{
+	background: url(win1.png) no-repeat 0 center;
+	top:180px;
+}
+#lose{
+	background: url(win2.png) no-repeat 0 center;
+	top:240px;
+	right: 150px;
+}
+#yin{
+	background: url(win3.png) no-repeat 0 center;
+	top:240px;
+	left: 150px;
+}
+/*#shu{
+	background: url(win4.png) no-repeat 0 center;
+	top:240px;
+	left: 60px;
+}*/
